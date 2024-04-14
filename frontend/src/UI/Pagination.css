@@ -1,0 +1,18 @@
+.pagination .pagination-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: #0257dd;
+  border: 1px solid #dee2e6e0;
+  transition: all 0.6s;
+}
+
+.pagination .pagination-link:hover,
+.pagination .pagination-link.active {
+  color: white;
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.pagination p {
+  font-size: 14px;
+}

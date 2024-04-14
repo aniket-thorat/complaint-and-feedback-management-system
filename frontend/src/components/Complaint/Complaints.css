@@ -1,0 +1,22 @@
+.rating {
+    display: inline-block;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 60px;
+    color: #ccc;
+    float: right;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: #ffca28;
+}
+.star-label{
+    font-size: 20px;
+}
