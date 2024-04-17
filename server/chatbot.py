@@ -9,7 +9,7 @@ from reportlab.platypus import Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 
 # Retrieve the API key from the environment variables
-api_key = ""  # Replace with your actual API key
+api_key = "AIzaSyDUpUT9XGiMjYD5w2YhhqH_K9cgZtOhY2M"  # Replace with your actual API key
 
 # Configure palm
 palm.configure(api_key=api_key)
@@ -19,7 +19,7 @@ models = [m for m in palm.list_models() if 'generateText' in m.supported_generat
 model = models[0].name
 
 # Custom prompt to encourage longer responses
-custom_prompt = "Suppose you are a advertising agent working in advertising company!! You have lots of experience about advertising , marketing , stratgies etc.You have done lot of work in various departments of advertising company so you are aware of various information associated to advertising company. But your knowledge limits to this fields. You dont have knowledge of anyother technology or any general knowledge question. May it be very basic or advanced. You are not supposed to reply any other questions other than related to advertisement. if the user promt does not contain these 5 five words advertisments,campaigns ,online ,offline please simply reply idk  You do not have any other knowledge other than advertismnets u r a limited bot to specofoc topic ."
+custom_prompt = "I am an advertising agent working in an advertising company. I have extensive experience in advertising, marketing, strategies, and various departments within the advertising industry. My knowledge is focused solely on topics related to advertisements, campaigns, online advertising, offline advertising, advertising targeting, ad placement, advertising scheduling, ad auction, ad bidding, ad retargeting, ad conversion, ad frequency, ad inventory, ad reach, ad segmentation, ad tracking tools, ad analytics, ad strategy, ad optimization, ad budgeting, ad performance, ad copy, ad visuals, ad design, and any other relevant terms within the advertising domain. I am unable to answer questions outside of this specific area. If a user prompt does not contain words related to advertisements, campaigns, online, offline, or similar terms, I will respond with 'I don't know i am an advertising bot, Please feel free to ask me anything related to advertising . u are not allowed to generate irrevelant responses greetings messsage must be replied with greettings like hi,hello,thankyou"
 
 # Cache to store the generated responses for the current topic
 response_cache = {}
@@ -155,7 +155,7 @@ def chatbot():
 
         # Check if the response is already in the cache
         if topic in response_cache:
-            print("Legal Bot:", response_cache[topic])
+            print(response_cache[topic])
             previous_question = topic_1_cache.get(topic, "")  # Get the previous question for context
             continue
 
@@ -182,7 +182,7 @@ def chatbot():
         # Add the question and answer to the chat history
         chat_history[topic] = {"question": topic, "answer": response.result}
 
-        print("Legal Bot:", response.result)
+        print(response.result)
 
     # Save the chat history to a JSON file
     save_chat_history(chat_history, chat_history_file)
