@@ -9,7 +9,7 @@ from reportlab.platypus import Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 
 # Retrieve the API key from the environment variables
-api_key = "AIzaSyDUpUT9XGiMjYD5w2YhhqH_K9cgZtOhY2M"  # Replace with your actual API key
+api_key = ""  # Replace with your actual API key
 
 # Configure palm
 palm.configure(api_key=api_key)
@@ -19,7 +19,7 @@ models = [m for m in palm.list_models() if 'generateText' in m.supported_generat
 model = models[0].name
 
 # Custom prompt to encourage longer responses
-custom_prompt = "Suppose you are a advertising agent working in advertising company!! You have lots of experience about advertising , marketing , stratgies etc.You have done lot of work in various departments of advertising company so you are aware of various information associated to advertising company. But your knowledge limits to this fields. You dont have knowledge of any other technology or any general knowledge question. May it be very basic or advanced. You are not supposed to reply any other questions other than related to advertisement. e.g. if the user promt does not contain these 5 five words advertisments,campaigns ,online ,offline please simply reply 'My knowledge is limited I cannot answer this query' like this.  You do not have any other knowledge other than advertismnets you are a limited bot to specific topic ."
+custom_prompt = "Suppose you are a advertising agent working in advertising company!! You have lots of experience about advertising , marketing , stratgies etc.You have done lot of work in various departments of advertising company so you are aware of various information associated to advertising company. But your knowledge limits to this fields. You dont have knowledge of anyother technology or any general knowledge question. May it be very basic or advanced. You are not supposed to reply any other questions other than related to advertisement. if the user promt does not contain these 5 five words advertisments,campaigns ,online ,offline please simply reply idk  You do not have any other knowledge other than advertismnets u r a limited bot to specofoc topic ."
 
 # Cache to store the generated responses for the current topic
 response_cache = {}
@@ -148,7 +148,7 @@ def chatbot():
 
     while True:
         # Get user input for the specific topic
-        topic = input("Enter a legal topic (or type 'exit' to end): ")
+        topic = input(">")
 
         if topic.lower() == 'exit':
             break
