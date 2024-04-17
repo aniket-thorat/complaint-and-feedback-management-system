@@ -51,7 +51,7 @@ const ChatbotComponent = () => {
 
     return (
         <>
-            <Hero title="My Complaints" />
+            <Hero title="Chat with our AI assistant" />
             <Section className="flex flex-col gap-6">
                 <div class="flex flex-col h-full bg-gray-100 rounded-lg shadow-md overflow-auto">
                     <div class="px-4 py-2 bg-gray-200 text-gray-700 font-bold">
@@ -60,18 +60,16 @@ const ChatbotComponent = () => {
 
                     <div class="flex-grow px-4 py-2 overflow-y-auto">
                         {chatLog.map((item, index) => (
-                            <div key={index} className={`flex mb-2 
-                ${item.type === 'response'
-                                    ? 'justify-start'
-                                    : 'justify-end'
-                                }`}
+                            <div
+                                key={index}
+                                className={`flex mb-2 
+                    ${item.type === 'response' ? 'justify-start' : 'justify-end'}
+                `}
                             >
                                 <div
                                     className={`message rounded-lg p-2 
-                    ${item.type === 'response'
-                                            ? 'bg-blue-500 text-white'
-                                            : 'bg-gray-300 text-black'
-                                        }`}
+                        ${item.type === 'response' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-black'}
+                    `}
                                 >
                                     {item.text}
                                 </div>
@@ -85,6 +83,11 @@ const ChatbotComponent = () => {
                             type="text"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    handleSendMessage();
+                                }
+                            }}
                             placeholder="Type your message..."
                         />
                         <button
