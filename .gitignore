@@ -4,5 +4,6 @@
 /backend/node_modules
 /server/node_modules
 /socket/node_modules
-/backend/.env
+/server/.env
 /frontend/package-lock.json
+/server/package-lock.json
