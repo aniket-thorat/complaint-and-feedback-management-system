@@ -24,6 +24,7 @@ import Users from "./pages/admin/Users";
 import Complaints from "./pages/admin/Complaints";
 import Categories from "./pages/admin/Categories";
 import AdminComplaint from "./pages/admin/Complaint";
+import ChatbotComponent from "./components/ChatBot/ChatbotComponent";
 
 const App = () => {
 	const [isLoading, setIsLoading] = useState(true);
@@ -92,6 +93,10 @@ const App = () => {
 				<Route
 					path="/complaint/:complaintId"
 					element={!user ? <Navigate to="/login" /> : <Complaint />}
+				/>
+				<Route
+					path="/chatbot"
+					element={!user ? <Navigate to="/login" /> : <ChatbotComponent />}
 				/>
 				<Route path="/faq">
 					<Route index={true} element={<FAQPage />} />
