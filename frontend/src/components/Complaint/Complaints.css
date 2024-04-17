@@ -20,3 +20,22 @@
 .star-label{
     font-size: 20px;
 }
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.upload-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.upload-btn:hover {
+    background-color: #0056b3;
+}

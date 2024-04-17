@@ -11,7 +11,7 @@ import UserPageError from "../components/States/UserPageError";
 import Input from "../UI/Input";
 import ErrorText from "../UI/ErrorText";
 import Section from "../layout/Section";
-import "../components/Complaint/Complaints.css"
+import "../components/Complaint/Complaints.css";
 const CreateComplaint = () => {
   const navigate = useNavigate();
 
@@ -49,36 +49,48 @@ const CreateComplaint = () => {
 
   const [submitting, setSubmitting] = useState(false);
   const [submittingError, setSubmittingError] = useState(false);
-  const[rating , setRating] = useState(0)
-
-  const submitHandler = async (event) => {
-    event.preventDefault();
-    console.log("Rating is ", rating);
-    if (!formIsValid) {
-      return;
-    }
-
-    setSubmitting(true);
-
-    try {
-      await axios({
-        method: "POST",
-        url: "http://127.0.0.1:5000/api/v1/complaints",
-        data: {
-          title: enteredTitle,
-          category: enteredCategory || categories[0]._id,
-          text: enteredMessage,
-          product_rating: rating,
-        },
-      });
-
-      setSubmitting(false);
-      navigate("/my-complaints");
-    } catch (error) {
-      setSubmitting(false);
-      setSubmittingError(true);
-    }
+  const [rating, setRating] = useState(0);
+  const [file , setFile] = useState(null);
+    
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
   };
+
+    const submitHandler = async (event) => {
+      event.preventDefault();
+      const formData = new FormData();
+      formData.append('image', file);
+      console.log("Rating is ", rating);
+      if (!formIsValid) {
+        return;
+      }
+
+      setSubmitting(true);
+
+      try {
+        await axios({
+          method: "POST",
+          url: "http://127.0.0.1:5000/api/v1/complaints",
+          data: {
+            title: enteredTitle,
+            category: enteredCategory || categories[0]._id,
+            text: enteredMessage,
+            product_rating: rating,
+            image: file
+          },
+          headers:{
+            'Content-Type': 'multipart/form-data',
+          },
+        });
+
+        setSubmitting(false);
+        navigate("/my-complaints");
+      } catch (error) {
+        setSubmitting(false);
+        setSubmittingError(true);
+      }
+    };
+  
 
   if (categoriesLoading) {
     return <UserPageLoading title="Create a New Complaint" />;
@@ -147,19 +159,53 @@ const CreateComplaint = () => {
             <div>
               <h1 className="star-label">Rate this product</h1>
               <div class="rating">
-                <input type="radio" id="star5" onClick={()=> setRating(5)} name="rating" value="5" />
+                <input
+                  type="radio"
+                  id="star5"
+                  onClick={() => setRating(5)}
+                  name="rating"
+                  value="5"
+                />
                 <label for="star5">★</label>
-                <input type="radio" id="star4" onClick= {()=> setRating(4)} name="rating" value="4" />
+                <input
+                  type="radio"
+                  id="star4"
+                  onClick={() => setRating(4)}
+                  name="rating"
+                  value="4"
+                />
                 <label for="star4">★</label>
-                <input type="radio" id="star3" onClick={()=> setRating(3)} name="rating" value="3" />
+                <input
+                  type="radio"
+                  id="star3"
+                  onClick={() => setRating(3)}
+                  name="rating"
+                  value="3"
+                />
                 <label for="star3">★</label>
-                <input type="radio" id="star2" onClick={()=> setRating(2)} name="rating" value="2" />
+                <input
+                  type="radio"
+                  id="star2"
+                  onClick={() => setRating(2)}
+                  name="rating"
+                  value="2"
+                />
                 <label for="star2">★</label>
-                <input type="radio" id="star1" onClick={()=> setRating(1)} name="rating" value="1" />
+                <input
+                  type="radio"
+                  id="star1"
+                  onClick={() => setRating(1)}
+                  name="rating"
+                  value="1"
+                />
                 <label for="star1">★</label>
               </div>
             </div>
 
+            <div>
+              <h1>Upload image</h1>
+              <input type="file" id="image-input" name="image" onChange={handleFileChange}/>
+            </div>
             <div className="flex flex-row gap-5">
               <Button
                 text="Cancel"
@@ -170,22 +216,10 @@ const CreateComplaint = () => {
               <Button text="Submit" disabled={submitting} />
             </div>
           </form>
-          <div className="lg:col-span-1 order-1 lg:order-2 flex flex-col gap-3">
-            <Alert
-              path="/FAQ"
-              icon={true}
-              text="Take a look at our FAQ page to quickly find your answers."
-            />
-            <Alert
-              path="/my-complaints"
-              icon={true}
-              text="View your previously created complaints from here."
-            />
-          </div>
+          {/* <div> */}
         </div>
       </Section>
     </>
   );
 };
-
 export default CreateComplaint;

@@ -170,6 +170,22 @@ const getComplaintsPerMonth = async (req, res) => {
   }
 };
 
+// Function to fetch date_created and rating from Complaints collection
+const getDateAndRating = async(req, res) => {
+  try {
+    // Fetch documents with date_created and rating fields
+    const complaints = await Complaint.find({}, { date_created: 1, product_rating: 1, _id: 0 }).lean();
+
+    // Format the data as a list of dictionaries
+    const data = complaints.map(({ date_created, product_rating }) => ({ date_created, product_rating }));
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return [];
+  }
+}
+
 const closeComplaint = async (req, res) => {
   const { complaintId } = req.params;
 
@@ -207,4 +223,5 @@ module.exports = {
   getComplaintById,
   getComplaintsPerMonth,
   closeComplaint,
+  getDateAndRating,
 };

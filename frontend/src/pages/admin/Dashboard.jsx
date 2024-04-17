@@ -53,6 +53,13 @@ const Dashboard = () => {
     `http://127.0.0.1:5000/api/v1/users/users-per-month`,
     "GET"
   );
+  const {
+    data: datevsrating
+  } = useAxios(
+    `http://127.0.0.1:5000/api/v1/complaints/date-vs-rating`,
+    "GET"
+  );
+  console.log(datevsrating)
 
   if (totalsLoading || complaintsPerMonthLoading || usersPerMonthLoading) {
     return <Loading />;
@@ -85,6 +92,16 @@ const Dashboard = () => {
         complaintsPerMonth={complaintsPerMonth}
         usersPerMonth={usersPerMonth}
       />
+
+  {/* <LineChart width={600} height={300} data={datevsrating}>
+    <CartesianGrid strokeDasharray="3 3" />
+    <XAxis dataKey="time" />
+    <YAxis />
+    <Tooltip />
+    <Legend />
+    <Line type="monotone" dataKey="rating" stroke="#8884d8" />
+  </LineChart> */}
+
     </>
   );
 };
