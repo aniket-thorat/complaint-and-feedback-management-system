@@ -25,7 +25,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="absolute pb-2 z-[50] w-full px-10 sm:px-16 md:px-28 lg:px-40 xl:px-60 py-4 flex flex-row items-center justify-between bg-gray-900 text-white font-semibold">
+		<nav className="absolute pt-5 pb-5 z-[50] w-full px-10 sm:px-16 md:px-28 lg:px-40 xl:px-60 py-4 flex flex-row items-center justify-between bg-gray-900 text-white font-semibold">
 			<Link to="/" className="text-lg lg:text-xl">
 				TestApp
 			</Link>
