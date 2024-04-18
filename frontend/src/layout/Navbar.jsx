@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { guestNavLinks, userNavLinks } from "../data/lists";
 import NavbarLink from "../components/Navbar/NavbarLink";
 import { logout, selectUser } from "../store/slices/userAuthSlice";
+import logOutImage from "../assets/logout.png"
+
 
 const Navbar = () => {
 	const navigate = useNavigate();
@@ -71,7 +73,8 @@ const Navbar = () => {
 							className={`cursor-pointer ${showLinks && "text-gray-400"}`}
 							onClick={logoutHandler}
 						>
-							Logout
+							{/* Logout */}
+							<img src={logOutImage} style={{height:"30px", width:"30px"}} title="Logout"/>
 						</li>
 					)}
 				</ul>
