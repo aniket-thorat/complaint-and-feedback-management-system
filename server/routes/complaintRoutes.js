@@ -1,11 +1,12 @@
 const router = require("express").Router();
+const multer = require('multer');
 const {
   createComplaint,
   getAllComplaints,
   getComplaintById,
   getComplaintsPerMonth,
   closeComplaint,
-  getDateAndRating,
+  // uploadImage,
 } = require("../controllers/complaintController");
 const authenticateUser = require("../middleware/authenticateUser");
 
@@ -18,6 +19,7 @@ router.get("/complaints-per-month", authenticateUser, getComplaintsPerMonth);
 router.put("/close/:complaintId", authenticateUser, closeComplaint);
 
 router.get("/:id", authenticateUser, getComplaintById);
-router.get("/date-vs-rating" , getDateAndRating);
+// const upload = multer({ dest: 'uploads/' });
+// router.post("/upload-image" , upload.single('image'), uploadImage);
 
 module.exports = router;

@@ -1,7 +1,36 @@
 const Category = require("../models/Category");
 const Complaint = require("../models/Complaint");
 const Message = require("../models/Message");
+const Image = require('../models/Image')
 const moment = require("moment");
+const multer = require('multer');
+
+// Configure multer for handling multipart/form-data (file uploads)
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  },
+});
+// const upload = multer({ storage: storage });
+
+// const uploadImage = async (req, res) => {
+//   try {
+//     // Create a new Image document
+//     const newImage = new Image({
+//         complaintId: req.body.text,
+//         image: req.file // Assuming 'path' is where Multer saves the image
+//     });
+//     // Save the image to MongoDB
+//     await newImage.save();
+//     res.status(201).send('Image uploaded successfully!');
+// } catch (err) {
+//     console.error(err);
+//     res.status(500).send('Internal Server Error');
+// }
+// }
 
 const createComplaint = async (req, res) => {
   try {
@@ -20,6 +49,7 @@ console.log("Rating received is ", product_rating)
       category: categoryDoc._id,
       user,
       product_rating,
+      // image,
     });
 
     const savedComplaint = await complaint.save();
@@ -174,15 +204,23 @@ const getComplaintsPerMonth = async (req, res) => {
 const getDateAndRating = async(req, res) => {
   try {
     // Fetch documents with date_created and rating fields
-    const complaints = await Complaint.find({}, { date_created: 1, product_rating: 1, _id: 0 }).lean();
+    const projection = {
+      _id: 0,
+      date_created: 1,
+      product_rating: 1,
+    };
+    const complaints = await Complaint.find({}, projection).lean();
+    console.log(complaints)
 
     // Format the data as a list of dictionaries
     const data = complaints.map(({ date_created, product_rating }) => ({ date_created, product_rating }));
-    console.log(data);
-    return data;
+    // console.log(data);
+    // return data;
+    res.status(201).json(data)
   } catch (error) {
     console.error('Error fetching data:', error);
-    return [];
+    // return [];
+    res.status(500).json({error: "Error fetching data"})
   }
 }
 
@@ -223,5 +261,5 @@ module.exports = {
   getComplaintById,
   getComplaintsPerMonth,
   closeComplaint,
-  getDateAndRating,
+  // uploadImage,
 };

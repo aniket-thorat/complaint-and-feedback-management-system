@@ -28,6 +28,9 @@ const complaintSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  // image: {
+  //   type: Buffer,
+  // },
   date_closed: Date,
 });
 

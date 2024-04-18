@@ -58,8 +58,8 @@ const CreateComplaint = () => {
 
     const submitHandler = async (event) => {
       event.preventDefault();
-      const formData = new FormData();
-      formData.append('image', file);
+      // const formData = new FormData();
+      // formData.append('image', file);
       console.log("Rating is ", rating);
       if (!formIsValid) {
         return;
@@ -76,11 +76,11 @@ const CreateComplaint = () => {
             category: enteredCategory || categories[0]._id,
             text: enteredMessage,
             product_rating: rating,
-            image: file
+            // image: file
           },
-          headers:{
-            'Content-Type': 'multipart/form-data',
-          },
+          // headers:{
+          //   'Content-Type': 'multipart/form-data',
+          // },
         });
 
         setSubmitting(false);
@@ -202,10 +202,10 @@ const CreateComplaint = () => {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h1>Upload image</h1>
               <input type="file" id="image-input" name="image" onChange={handleFileChange}/>
-            </div>
+            </div> */}
             <div className="flex flex-row gap-5">
               <Button
                 text="Cancel"

@@ -9,7 +9,7 @@ from reportlab.platypus import Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
 
 # Retrieve the API key from the environment variables
-api_key = ""  # Replace with your actual API key
+api_key = "AIzaSyDUpUT9XGiMjYD5w2YhhqH_K9cgZtOhY2M"  # Replace with your actual API key
 
 # Configure palm
 palm.configure(api_key=api_key)
@@ -19,8 +19,7 @@ models = [m for m in palm.list_models() if 'generateText' in m.supported_generat
 model = models[0].name
 
 # Custom prompt to encourage longer responses
-custom_prompt = "Suppose you are a advertising agent working in advertising company!! You have lots of experience about advertising , marketing , stratgies etc.You have done lot of work in various departments of advertising company so you are aware of various information associated to advertising company. But your knowledge limits to this fields. You dont have knowledge of anyother technology or any general knowledge question. May it be very basic or advanced. You are not supposed to reply any other questions other than related to advertisement. if the user promt does not contain these 5 five words advertisments,campaigns ,online ,offline please simply reply idk  You do not have any other knowledge other than advertismnets u r a limited bot to specofoc topic ."
-
+custom_prompt = "You are an advertising agent chatbot specializing in the advertising industry if the user greets your with hi, hello or hey  greet him with ' Hi, I am Maccros Media LLP bot for your Advertisment releated queries '  and if user asks you who created you you will reply 'Maccros Team' or if user say thankyou greet him too . Your expertise covers topics such as advertisements, campaigns, online and offline marketing, advertising strategies, targeting, auctioning, bidding, retargeting, inventory, reach, segmentation, tracking tools, analytics, strategy optimization, budgeting, performance analysis,, visual design, and other relevant advertising terms. you  will not answer questions outside of this specific domain. If your query doesn't relate to advertising, campaigns, like terms , you will respond with 'I don't know. I am an advertising bot. Please feel free to ask me anything related to advertising."
 # Cache to store the generated responses for the current topic
 response_cache = {}
 
@@ -148,7 +147,7 @@ def chatbot():
 
     while True:
         # Get user input for the specific topic
-        topic = input(">")
+        topic = input("")
 
         if topic.lower() == 'exit':
             break

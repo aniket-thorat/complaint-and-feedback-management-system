@@ -4,6 +4,7 @@ import Loading from "../../UI/Loading";
 import ChartsContainer from "../../components/Charts/ChartsContainer";
 import { FaUserShield, FaListUl, FaEnvelope, FaUsers } from "react-icons/fa6";
 import TableFetchError from "../../components/Table/TableFetchError";
+import Button from "../../UI/Button";
 
 const Dashboard = () => {
   const cards = useMemo(
@@ -54,12 +55,13 @@ const Dashboard = () => {
     "GET"
   );
   const {
-    data: datevsrating
+    data: data
   } = useAxios(
     `http://127.0.0.1:5000/api/v1/complaints/date-vs-rating`,
     "GET"
   );
-  console.log(datevsrating)
+  // datevsrating ="Some date and rating"
+  // console.log(datevsrating)
 
   if (totalsLoading || complaintsPerMonthLoading || usersPerMonthLoading) {
     return <Loading />;
@@ -101,7 +103,16 @@ const Dashboard = () => {
     <Legend />
     <Line type="monotone" dataKey="rating" stroke="#8884d8" />
   </LineChart> */}
+{/* {data} */}
+{/* <button
+      className={`w-fit py-2 px-5 bg-primary-color rounded-md outline-none text-white text-[15px] font-bold tracking-wider opacity-[0.75] cursor-pointer transition duration-700 hover:opacity-100`}
+    >
+      View Dashboard
+    </button> */}
+    <Button className= "mt-5">
 
+    <a href="https://aniketthorat0809.grafana.net/d/edix10gy1ul8ge/complaintmanagementsystem?orgId=1" target="_blank">View Dashboard</a>
+    </Button>
     </>
   );
 };
