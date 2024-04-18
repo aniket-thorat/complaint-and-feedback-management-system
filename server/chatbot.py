@@ -154,7 +154,7 @@ def chatbot():
 
         # Check if the response is already in the cache
         if topic in response_cache:
-            print("Legal Bot:", response_cache[topic])
+            print(response_cache[topic])
             previous_question = topic_1_cache.get(topic, "")  # Get the previous question for context
             continue
 
@@ -181,7 +181,7 @@ def chatbot():
         # Add the question and answer to the chat history
         chat_history[topic] = {"question": topic, "answer": response.result}
 
-        print("Legal Bot:", response.result)
+        print(response.result)
 
     # Save the chat history to a JSON file
     save_chat_history(chat_history, chat_history_file)
