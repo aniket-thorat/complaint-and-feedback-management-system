@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa6";
 
 export const guestNavLinks = [
-  { path: "/faq", text: "FAQ" },
+  // { path: "/faq", text: "FAQ" },
   { path: "/login", text: "Log In" },
   { path: "/signup", text: "Sign Up" },
 ];
