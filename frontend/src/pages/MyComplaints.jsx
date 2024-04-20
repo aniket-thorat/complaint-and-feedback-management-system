@@ -82,12 +82,12 @@ const MyComplaints = () => {
 	  <div style={{float:"right", marginRight:"100px"}}>
 		<div>
 
-          <a href="http://127.0.0.1:3000/chatbot" style={{float:"right", display:"block"}}>
+          <a href="http://127.0.0.1:5500/MACCROS-ChatBot/index.html" style={{float:"right", display:"block"}} target="_blank">
             <img src={botImage} alt = "This is bot image" style={{width:"85px", height:"85px", float:"right"}}/>
           </a>
 		 
 		</div>
-		<div><a href="http://127.0.0.1:3000/chatbot" style={{float:"right", display:"block"}}><i> Chat with bot </i></a></div>
+		<div><a href="http://127.0.0.1:5500/MACCROS-ChatBot/index.html" style={{float:"right", display:"block"}} target="_blank"><i> Chat with bot </i></a></div>
 		</div>
 		{/* <div>
 		<div style={{float:"right"}}>
