@@ -85,12 +85,19 @@ const controlChat = () => {
 
 	chatbotProcess.stdout.on('data', (data) => {
 		const response = data.toString().trim();
+		var result = "";
+		for (var i = 0; i < response.length; i++) {
+			if (response[i]=='*') {
+				continue;
+			}
+			result += response[i];
+		}
 		console.log('Chatbot response:', response);
 
 		// Broadcast the chatbot response to all connected clients
 		wss.clients.forEach((client) => {
 			if (client.readyState === WebSocket.OPEN) {
-				client.send(response);
+				client.send(result);
 			}
 		});
 	});

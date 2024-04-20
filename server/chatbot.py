@@ -1,201 +1,71 @@
-import os
-import json
-import google.generativeai as palm
-from summa import summarizer
-from reportlab.lib.pagesizes import letter
-from reportlab.lib import colors
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
-from reportlab.platypus import Paragraph
-from reportlab.lib.styles import getSampleStyleSheet
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report
 
-# Retrieve the API key from the environment variables
-api_key = "AIzaSyDUpUT9XGiMjYD5w2YhhqH_K9cgZtOhY2M"  # Replace with your actual API key
+# Load the dataset
+df = pd.read_csv('complaints_data.csv')
 
-# Configure palm
-palm.configure(api_key=api_key)
+# Preprocessing
+X = df['complaintTitle'] + ' ' + df['complaintDescription']
+y = df['complaintCategory']
 
-# Choose a model, there is 1 model available
-models = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods]
-model = models[0].name
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Custom prompt to encourage longer responses
-custom_prompt = "You are an advertising agent chatbot specializing in the advertising industry if the user greets your with hi, hello or hey  greet him with ' Hi, I am Maccros Media LLP bot for your Advertisment releated queries '  and if user asks you who created you you will reply 'Maccros Team' or if user say thankyou greet him too . Your expertise covers topics such as advertisements, campaigns, online and offline marketing, advertising strategies, targeting, auctioning, bidding, retargeting, inventory, reach, segmentation, tracking tools, analytics, strategy optimization, budgeting, performance analysis,, visual design, and other relevant advertising terms. you  will not answer questions outside of this specific domain. If your query doesn't relate to advertising, campaigns, like terms , you will respond with 'I don't know. I am an advertising bot. Please feel free to ask me anything related to advertising."
-# Cache to store the generated responses for the current topic
-response_cache = {}
+# Vectorize text data using TF-IDF
+tfidf_vectorizer = TfidfVectorizer(max_features=1000)
+X_train_tfidf = tfidf_vectorizer.fit_transform(X_train)
+X_test_tfidf = tfidf_vectorizer.transform(X_test)
 
-# Cache to store the previous question for context
-topic_1_cache = {}
+# Train a Logistic Regression model
+classifier = LogisticRegression(max_iter=1000)
+classifier.fit(X_train_tfidf, y_train)
 
-# Chat history to store all questions and answers
-chat_history = {}
+# Evaluate the model
+y_pred = classifier.predict(X_test_tfidf)
+accuracy = accuracy_score(y_test, y_pred)
+# print(f'Accuracy: {accuracy}')
+# print(classification_report(y_test, y_pred))
 
-# File paths for chat history and topic_1_cache
-chat_history_file = "chat_history.json"
-topic_1_cache_file = "topic_1_cache.json"
+# Dummy responses for different categories
+response_dict = {
+    'billing': 'We apologize for any billing issues. Please contact share your concern with our customer executive to resolve your billing concerns.',
+    'delivery': 'We are sorry for any delivery delays. Our team is working hard to resolve this issue.',
+    'product_quality': 'We take product quality seriously. Please raise a complaint for your concern our executive will contact you as soon as possible.',
+    'customer_service': 'Our customer service team will reach out to you shortly to address your concerns.',
+	'advertising':'Our company makes sure you wont get any problem in our ads services please send us an email at tempMail@gmail.com with your full concern. We will reach out to you at the earliest.',
+    'other': 'Thank you for reaching us out. Currently I dont have enough data to answer your query please raised a complaint for your query.',
+	'greeting': 'Hello! How can I assist you today?',
+    'thanks': 'You are welcome! I am happy to help.'
+}
 
-def load_chat_history(file_path):
-    """
-    Load chat history from a JSON file.
+def classify_complaint(complaint_text):
+    # Vectorize the complaint text
+    complaint_tfidf = tfidf_vectorizer.transform([complaint_text])
 
-    Args:
-        file_path (str): The file path of the JSON file.
+    # Predict category
+    predicted_category = classifier.predict(complaint_tfidf)[0]
 
-    Returns:
-        dict: The loaded chat history.
-    """
-    if os.path.exists(file_path):
-        with open(file_path, "r") as file:
-            return json.load(file)
+    return predicted_category
+
+def get_bot_response(user_input):
+    # Check if user input is a greeting or thanks
+    greetings = ['hi', 'hello', 'hola', 'helo', 'hlo', 'hii']
+    thanks = ['thank you', 'thanks', 'ok', 'okay', 'ok thanks', 'ok thank you', 'thank']
+    if any(greeting in user_input.lower() for greeting in greetings):
+        return response_dict['greeting']
+    elif any(thank in user_input.lower() for thank in thanks):
+        return response_dict['thanks']
     else:
-        return {}
+        # Predict category for non-greeting inputs
+        predicted_category = classify_complaint(user_input)
+        return response_dict.get(predicted_category, response_dict['other'])
 
-def save_chat_history(chat_history, file_path):
-    """
-    Save chat history to a JSON file.
-
-    Args:
-        chat_history (dict): The chat history to be saved.
-        file_path (str): The file path of the JSON file.
-    """
-    with open(file_path, "w") as file:
-        json.dump(chat_history, file)
-
-def load_topic_1_cache(file_path):
-    """
-    Load the topic_1_cache from a JSON file.
-
-    Args:
-        file_path (str): The file path of the JSON file.
-
-    Returns:
-        dict: The loaded topic_1_cache.
-    """
-    if os.path.exists(file_path):
-        with open(file_path, "r") as file:
-            return json.load(file)
-    else:
-        return {}
-
-def save_topic_1_cache(topic_1_cache, file_path):
-    """
-    Save the topic_1_cache to a JSON file.
-
-    Args:
-        topic_1_cache (dict): The topic_1_cache to be saved.
-        file_path (str): The file path of the JSON file.
-    """
-    with open(file_path, "w") as file:
-        json.dump(topic_1_cache, file)
-
-def delete_topic_1_cache(file_path):
-    """
-    Delete the data in the topic_1_cache file.
-
-    Args:
-        file_path (str): The file path of the JSON file.
-    """
-    if os.path.exists(file_path):
-        os.remove(file_path)
-
-def generate_brief(text):
-    """
-    Generate a brief summary of the given text.
-
-    Args:
-        text (str): The text to be summarized.
-
-    Returns:
-        str: The generated summary.
-    """
-    return summarizer.summarize(text, ratio=0.2)  # Adjust the ratio as needed
-
-def generate_pdf_report(chat_history, pdf_filename):
-    """
-    Generate a PDF report based on the chat history.
-
-    Args:
-        chat_history (dict): The chat history.
-        pdf_filename (str): The file name of the PDF report.
-    """
-    doc = SimpleDocTemplate(pdf_filename, pagesize=letter)
-
-    # Create a list to hold the content of the PDF
-    content = []
-
-    # Create a style for the table
-    styles = getSampleStyleSheet()
-    style = styles["Normal"]
-
-    # Add a title for the report
-    content.append(Paragraph("Summary_Report", styles["Title"]))
-
-    # Add the chat history as paragraphs
-    for topic, chat in chat_history.items():
-        if chat and "answer" in chat and chat["answer"]:
-            content.append(Paragraph(f"Topic: {topic}", styles["Heading2"]))
-            content.append(Paragraph(generate_brief(chat["answer"]), style))
-
-    # Build the PDF document
-    doc.build(content)
-
-def chatbot():
-    """
-    Main chatbot function.
-    """
-    chat_history = load_chat_history(chat_history_file)
-    topic_1_cache = load_topic_1_cache(topic_1_cache_file)
-
-    while True:
-        # Get user input for the specific topic
-        topic = input("")
-
-        if topic.lower() == 'exit':
-            break
-
-        # Check if the response is already in the cache
-        if topic in response_cache:
-            print(response_cache[topic])
-            previous_question = topic_1_cache.get(topic, "")  # Get the previous question for context
-            continue
-
-        # Construct the API call prompt using the current topic and the previous question for context
-        api_call_prompt = f"{custom_prompt} {topic}"
-        if topic in topic_1_cache:
-            previous_question = topic_1_cache[topic]
-            api_call_prompt += f" {previous_question}"
-
-        # Otherwise, generate the response and cache it
-        response = palm.generate_text(
-            prompt=api_call_prompt,
-            model=model,
-            temperature=0.95,
-            max_output_tokens=2048,
-            top_p=0.9,
-            top_k=30,
-            stop_sequences=["end of explanation"]
-        )
-
-        response_cache[topic] = response.result
-        topic_1_cache[topic] = topic  # Store the current topic in topic_1_cache
-
-        # Add the question and answer to the chat history
-        chat_history[topic] = {"question": topic, "answer": response.result}
-
-        print(response.result)
-
-    # Save the chat history to a JSON file
-    save_chat_history(chat_history, chat_history_file)
-    save_topic_1_cache(topic_1_cache, topic_1_cache_file)
-
-    # Generate the PDF report
-    pdf_filename = "chat_history_report.pdf"
-    generate_pdf_report(chat_history, pdf_filename)
-    print(f"\nChat history saved to {chat_history_file}")
-    print(f"Chat history report saved to {pdf_filename}")
-
-    # Delete data in the topic_1_cache file
-    delete_topic_1_cache(topic_1_cache_file)
-
-# Run the chatbot
+# Example usage
 if __name__ == "__main__":
-    chatbot()
+	while True:
+		complaint_text = input("")
+		response = get_bot_response(complaint_text)
+		print(response)

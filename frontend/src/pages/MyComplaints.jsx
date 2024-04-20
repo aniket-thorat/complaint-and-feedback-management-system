@@ -79,21 +79,21 @@ const MyComplaints = () => {
         />
 		
       </Section>
-	  {/* <div style={{float:"right", marginRight:"100px"}}>
+	  <div style={{float:"right", marginRight:"100px"}}>
 		<div>
 
-          <a href="http://127.0.0.1:5500/server/MACCROS-ChatBot/index.html" style={{float:"right", display:"block"}} target="_blank">
+          <a href="http://localhost:3000/chatbot" style={{float:"right", display:"block"}}>
             <img src={botImage} alt = "This is bot image" style={{width:"85px", height:"85px", float:"right"}}/>
           </a>
 		 
 		</div>
-		<div><a href="http://127.0.0.1:5500/server/MACCROS-ChatBot/index.html" style={{float:"right", display:"block"}} target="_blank"><i> Chat with bot </i></a></div>
-		</div> */}
-		{/* <div>
+		<div><a href="http://localhost:3000/chatbot" style={{float:"right", display:"block"}}><i> Chat with bot </i></a></div>
+		</div>
+		<div>
 		<div style={{float:"right"}}>
 			<p style={{float:"right"}}>Having trouble? Chat with AI Bot</p>
 		  </div>
-		</div> */}
+		</div> 
     </>
   );
 };
