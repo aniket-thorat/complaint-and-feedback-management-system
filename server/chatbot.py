@@ -31,7 +31,7 @@ accuracy = accuracy_score(y_test, y_pred)
 
 # Dummy responses for different categories
 response_dict = {
-    'billing': 'We apologize for any billing issues. Please contact share your concern with our customer executive to resolve your billing concerns.',
+    'billing': "We apologize for any billing issues you've encountered. Please contact our customer service team, and they'll assist you in resolving your billing concerns promptly. Your satisfaction is our priority, and we're committed to ensuring a seamless experience for you. Thank you for bringing this to our attention, and we appreciate your patience as we work to make things right for you.",
     'delivery': 'We are sorry for any delivery delays. Our team is working hard to resolve this issue.',
     'product_quality': 'We take product quality seriously. Please raise a complaint for your concern our executive will contact you as soon as possible.',
     'customer_service': 'Our customer service team will reach out to you shortly to address your concerns.',

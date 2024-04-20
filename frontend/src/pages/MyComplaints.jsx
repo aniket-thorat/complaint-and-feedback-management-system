@@ -83,16 +83,16 @@ const MyComplaints = () => {
 		<div>
 
           <a href="http://localhost:3000/chatbot" style={{float:"right", display:"block"}}>
-            <img src={botImage} alt = "This is bot image" style={{width:"85px", height:"85px", float:"right"}}/>
+            <img src={botImage} title="Chatbot" alt = "This is bot image" style={{width:"85px", height:"85px", float:"right"}}/>
           </a>
 		 
 		</div>
 		<div><a href="http://localhost:3000/chatbot" style={{float:"right", display:"block"}}><i> Chat with bot </i></a></div>
 		</div>
 		<div>
-		<div style={{float:"right"}}>
+		{/* <div style={{float:"right"}}>
 			<p style={{float:"right"}}>Having trouble? Chat with AI Bot</p>
-		  </div>
+		  </div> */}
 		</div> 
     </>
   );
