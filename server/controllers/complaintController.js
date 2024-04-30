@@ -4,7 +4,7 @@ const Message = require("../models/Message");
 const Image = require('../models/Image')
 const moment = require("moment");
 const multer = require('multer');
-
+const fs = require('fs');
 // Configure multer for handling multipart/form-data (file uploads)
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -14,6 +14,7 @@ const storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
+var compID = 2001;
 // const upload = multer({ storage: storage });
 
 // const uploadImage = async (req, res) => {
@@ -31,6 +32,17 @@ const storage = multer.diskStorage({
 //     res.status(500).send('Internal Server Error');
 // }
 // }
+const appendToCSV = (data) => {
+	const csvString = `${data.join(',')}\n`;
+	const filePath = 'complaints_data.csv';
+	fs.appendFile(filePath, csvString, (err) => {
+		if (err) {
+			console.error('Error appending to CSV file:', err);
+			return;
+		}
+		console.log('Data appended to CSV file successfully!');
+	});
+}
 
 const createComplaint = async (req, res) => {
   try {
@@ -63,6 +75,9 @@ console.log("Rating received is ", product_rating)
       text,
       // rating
     });
+
+    const newData = [compID, title, text, categoryDoc.name, product_rating];
+		appendToCSV(newData);
 
     const savedMessage = await message.save();
     res.json({ complaint: savedComplaint, message: savedMessage });

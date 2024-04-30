@@ -26,16 +26,17 @@ classifier.fit(X_train_tfidf, y_train)
 # Evaluate the model
 y_pred = classifier.predict(X_test_tfidf)
 accuracy = accuracy_score(y_test, y_pred)
-# print(f'Accuracy: {accuracy}')
-# print(classification_report(y_test, y_pred))
+print(f'Accuracy: {accuracy}')
+print(classification_report(y_test, y_pred))
 
 # Dummy responses for different categories
 response_dict = {
     'billing': "We apologize for any billing issues you've encountered. Please contact our customer service team, and they'll assist you in resolving your billing concerns promptly. Your satisfaction is our priority, and we're committed to ensuring a seamless experience for you. Thank you for bringing this to our attention, and we appreciate your patience as we work to make things right for you.",
-    'delivery': 'We are sorry for any delivery delays. Our team is working hard to resolve this issue.',
-    'product_quality': 'We take product quality seriously. Please raise a complaint for your concern our executive will contact you as soon as possible.',
-    'customer_service': 'Our customer service team will reach out to you shortly to address your concerns.',
-	'advertising':'Our company makes sure you wont get any problem in our ads services please send us an email at tempMail@gmail.com with your full concern. We will reach out to you at the earliest.',
+    'delivery': "We apologize for delivery delays and assure you that our team is actively resolving the issue. Your satisfaction is crucial, and we're working diligently to ensure prompt and improved deliveries. Thank you for your patience and support. If you need further assistance or have concerns, please contact us.",
+    'product_quality': 'We prioritize product quality. Kindly raise a complaint regarding your concern, and our team will promptly address it. Expect our executive to contact you soon for assistance. Thank you for your feedback and for helping us maintain our commitment to quality service.',
+    'customer_service': "Our dedicated customer service team is committed to addressing your concerns promptly. Expect a member of our team to reach out to you shortly to discuss and resolve any issues you may have. Your satisfaction is important to us, and we appreciate your patience as we work to ensure a positive experience for you. Thank you for choosing us and for bringing your concerns to our attention.",
+	'advertising':'To ensure a seamless experience with our ads services, please email us at maccros@gmail.com with your detailed concerns. Our team will prioritize addressing your issues promptly. Rest assured, we are committed to resolving any problems you may encounter. Thank you for choosing our services, and we look forward to assisting you soon.',
+    'ecommerce_platform': '',
     'other': 'Thank you for reaching us out. Currently I dont have enough data to answer your query please raised a complaint for your query.',
 	'greeting': 'Hello! How can I assist you today?',
     'thanks': 'You are welcome! I am happy to help.'

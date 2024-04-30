@@ -34,7 +34,7 @@ const ComplaintForm = ({
       setText={setMessage}
       placeholder="Your message..."
       submitFunction={sendMessageHandler}
-      conditionToSend={(value) => value.trim().length >= 10}
+      conditionToSend={(value) => value.trim().length >= 1}
     />
   );
 };

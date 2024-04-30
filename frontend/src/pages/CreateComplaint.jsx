@@ -157,7 +157,7 @@ const CreateComplaint = () => {
               )}
             </div>
             <div>
-              <h1 className="star-label">Rate this product</h1>
+              <h1 className="star-label">Rate this service</h1>
               <div class="rating">
                 <input
                   type="radio"
@@ -201,11 +201,6 @@ const CreateComplaint = () => {
                 <label for="star1">★</label>
               </div>
             </div>
-
-            {/* <div>
-              <h1>Upload image</h1>
-              <input type="file" id="image-input" name="image" onChange={handleFileChange}/>
-            </div> */}
             <div className="flex flex-row gap-5">
               <Button
                 text="Cancel"
@@ -216,7 +211,6 @@ const CreateComplaint = () => {
               <Button text="Submit" disabled={submitting} />
             </div>
           </form>
-          {/* <div> */}
         </div>
       </Section>
     </>

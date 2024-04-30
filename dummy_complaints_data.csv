@@ -1,0 +1,501 @@
+complaintID,complaintTitle,complaintDescription,complaintCategory,Rating
+1,Incorrect billing amount,I was charged incorrectly for a service that I did not use.,billing,1
+2,Late delivery of products,My order was delivered much later than the estimated delivery date.,delivery,3
+3,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,1
+4,Unhelpful responses,The responses from customer service were unhelpful and generic.,customer_service,2
+5,Website crashes frequently,The website crashes frequently when I try to access certain pages.,website_issues,1
+6,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,1
+7,Technical issues on the ecommerce platform,I encountered technical issues while using the ecommerce platform.,ecommerce_platform,1
+8,Query about services,I have a query about the services provided by the company.,other,1
+9,Refund not received,I have not received my refund for a canceled service.,billing,4
+10,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,5
+11,Product not as advertised,The product received does not match the description and photos online.,product_quality,4
+12,Incorrect information provided,I received incorrect information from customer service representatives.,customer_service,5
+13,Website not mobile-friendly,The website is not optimized for mobile devices and is difficult to navigate.,website_issues,5
+14,Advertising strategy feedback,I have feedback and suggestions for improving the advertising strategy.,advertising,1
+15,Technical issues on the ecommerce platform,I encountered technical issues while using the ecommerce platform.,ecommerce_platform,1
+16,Query about services,I have a query about the services provided by the company.,other,5
+17,Incorrect billing amount,I was charged incorrectly for a service that I did not use.,billing,1
+18,Damaged products received,I received damaged products in my delivery.,delivery,5
+19,Product missing components,The product is missing some essential components.,product_quality,2
+20,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,5
+21,Website not mobile-friendly,The website is not optimized for mobile devices and is difficult to navigate.,website_issues,3
+22,Advertising strategy feedback,I have feedback and suggestions for improving the advertising strategy.,advertising,1
+23,User interface feedback,I have feedback on the user interface and navigation of the platform.,ecommerce_platform,3
+24,Query about services,I have a query about the services provided by the company.,other,2
+25,Incorrect billing amount,I was charged incorrectly for a service that I did not use.,billing,2
+26,Late delivery of products,My order was delivered much later than the estimated delivery date.,delivery,2
+27,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,2
+28,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,4
+29,Broken links on the website,There are broken links and errors on various pages of the website.,website_issues,4
+30,Advertising ROI concerns,I have concerns about the return on investment from advertising efforts.,advertising,5
+31,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,1
+32,Query about services,I have a query about the services provided by the company.,other,4
+33,Subscription renewal issue,My subscription was renewed without my authorization.,billing,3
+34,Incorrect delivery address,The delivery was made to the wrong address.,delivery,1
+35,Poor quality of products received,The products I received are of poor quality and not as described.,product_quality,3
+36,Incorrect information provided,I received incorrect information from customer service representatives.,customer_service,3
+37,Login issues,I am unable to log in to my account on the website.,website_issues,5
+38,Inconsistent branding in ads,There are inconsistencies in branding across different advertising materials.,advertising,2
+39,Payment gateway problems,I experienced issues with completing payments through the platform.,ecommerce_platform,5
+40,Feedback on products,I have feedback and suggestions regarding the products offered.,other,2
+41,Subscription renewal issue,My subscription was renewed without my authorization.,billing,5
+42,Wrong item delivered,I received a different item than what I ordered.,delivery,1
+43,Wrong product specifications,The specifications mentioned for the product do not match what I received.,product_quality,5
+44,Incorrect information provided,I received incorrect information from customer service representatives.,customer_service,1
+45,Payment gateway errors,I encountered errors when trying to complete a payment on the website.,website_issues,4
+46,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,1
+47,Order tracking difficulties,I faced difficulties in tracking my orders through the platform.,ecommerce_platform,1
+48,Suggestion for improvement,I have a suggestion for improving a specific aspect of the company.,other,4
+49,Refund not received,I have not received my refund for a canceled service.,billing,4
+50,Missing items in delivery,Some items are missing from the delivery package.,delivery,2
+51,Product missing components,The product is missing some essential components.,product_quality,2
+52,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,3
+53,Payment gateway errors,I encountered errors when trying to complete a payment on the website.,website_issues,3
+54,Inconsistent branding in ads,There are inconsistencies in branding across different advertising materials.,advertising,5
+55,Missing product information,There is missing or incomplete information about products on the platform.,ecommerce_platform,3
+56,Unspecified issue,I encountered an issue that I cannot specify in detail.,other,2
+57,Refund not received,I have not received my refund for a canceled service.,billing,1
+58,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,2
+59,Expired products,I received products that are past their expiration date.,product_quality,1
+60,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,3
+61,Slow website performance,The website is very slow and unresponsive during peak hours.,website_issues,5
+62,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,3
+63,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,3
+64,Query about services,I have a query about the services provided by the company.,other,2
+65,Billing for a canceled service,I am still being billed for a service that I have canceled.,billing,3
+66,Wrong item delivered,I received a different item than what I ordered.,delivery,3
+67,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,4
+68,Ineffective communication,There was a lack of communication regarding the status of my complaint.,customer_service,1
+69,Website crashes frequently,The website crashes frequently when I try to access certain pages.,website_issues,3
+70,Advertising strategy feedback,I have feedback and suggestions for improving the advertising strategy.,advertising,4
+71,Difficulty in product search,It is difficult to find specific products using the search function on the platform.,ecommerce_platform,2
+72,Request for assistance,I need assistance with a problem but am not sure how to categorize it.,other,4
+73,Double charged for a service,I noticed that I have been double charged for the same service.,billing,3
+74,Incorrect delivery address,The delivery was made to the wrong address.,delivery,1
+75,Product missing components,The product is missing some essential components.,product_quality,2
+76,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,5
+77,Broken links on the website,There are broken links and errors on various pages of the website.,website_issues,1
+78,Misleading advertisements,The advertisements were misleading and did not accurately represent the products.,advertising,3
+79,Technical issues on the ecommerce platform,I encountered technical issues while using the ecommerce platform.,ecommerce_platform,2
+80,Account-related issue,I have an issue related to my account or user profile.,other,3
+81,Payment not processed,My payment for an order was not processed successfully.,billing,2
+82,Delivery not attempted,No attempt was made to deliver the package to my address.,delivery,5
+83,Wrong product specifications,The specifications mentioned for the product do not match what I received.,product_quality,4
+84,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,3
+85,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,5
+86,Advertising strategy feedback,I have feedback and suggestions for improving the advertising strategy.,advertising,3
+87,Product listing errors,There are errors and inconsistencies in the product listings on the platform.,ecommerce_platform,2
+88,Unspecified issue,I encountered an issue that I cannot specify in detail.,other,3
+89,Late billing statement,"I received my billing statement late, causing confusion.",billing,3
+90,Incomplete delivery,I received only part of my order in the delivery.,delivery,4
+91,Wrong product specifications,The specifications mentioned for the product do not match what I received.,product_quality,4
+92,Difficulties in reaching support,I faced difficulties in reaching customer support through the provided channels.,customer_service,3
+93,Website crashes frequently,The website crashes frequently when I try to access certain pages.,website_issues,5
+94,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,1
+95,Payment gateway problems,I experienced issues with completing payments through the platform.,ecommerce_platform,3
+96,Account-related issue,I have an issue related to my account or user profile.,other,1
+97,Refund not received,I have not received my refund for a canceled service.,billing,3
+98,Delayed shipping notification,I did not receive a notification about the delay in shipping.,delivery,1
+99,Inconsistent product quality,The quality of products varies significantly across different orders.,product_quality,1
+100,Escalation of complaint,I had to escalate my complaint multiple times to get a response.,customer_service,1
+101,Website not mobile-friendly,The website is not optimized for mobile devices and is difficult to navigate.,website_issues,5
+102,Ineffective advertising campaigns,I found the advertising campaigns to be ineffective in reaching the target audience.,advertising,2
+103,User interface feedback,I have feedback on the user interface and navigation of the platform.,ecommerce_platform,4
+104,Unspecified issue,I encountered an issue that I cannot specify in detail.,other,5
+105,Incorrect billing amount,I was charged incorrectly for a service that I did not use.,billing,3
+106,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,4
+107,Defective items,Some of the items I received are defective and unusable.,product_quality,4
+108,Lack of follow-up,There was no follow-up from customer service after my initial complaint.,customer_service,4
+109,Payment gateway errors,I encountered errors when trying to complete a payment on the website.,website_issues,2
+110,Low click-through rates,The ads had low click-through rates and did not generate much traffic.,advertising,3
+111,Product listing errors,There are errors and inconsistencies in the product listings on the platform.,ecommerce_platform,5
+112,Technical support needed,I require technical support for a problem I am facing.,other,3
+113,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,2
+114,Delivery not attempted,No attempt was made to deliver the package to my address.,delivery,1
+115,Expired products,I received products that are past their expiration date.,product_quality,2
+116,Escalation of complaint,I had to escalate my complaint multiple times to get a response.,customer_service,1
+117,Login issues,I am unable to log in to my account on the website.,website_issues,2
+118,Ad performance tracking,I would like better tracking and analysis of ad performance metrics.,advertising,4
+119,Difficulty in product search,It is difficult to find specific products using the search function on the platform.,ecommerce_platform,3
+120,Feedback on products,I have feedback and suggestions regarding the products offered.,other,3
+121,Late billing statement,"I received my billing statement late, causing confusion.",billing,1
+122,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,5
+123,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,5
+124,Unhelpful responses,The responses from customer service were unhelpful and generic.,customer_service,4
+125,Website not mobile-friendly,The website is not optimized for mobile devices and is difficult to navigate.,website_issues,4
+126,Advertising ROI concerns,I have concerns about the return on investment from advertising efforts.,advertising,2
+127,Missing product information,There is missing or incomplete information about products on the platform.,ecommerce_platform,1
+128,General feedback,I have some general feedback and suggestions for improvement.,other,2
+129,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,4
+130,Missing items in delivery,Some items are missing from the delivery package.,delivery,2
+131,Poor quality of products received,The products I received are of poor quality and not as described.,product_quality,4
+132,Incorrect information provided,I received incorrect information from customer service representatives.,customer_service,1
+133,Website design issues,There are design issues and inconsistencies across different pages of the website.,website_issues,3
+134,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,2
+135,Payment gateway problems,I experienced issues with completing payments through the platform.,ecommerce_platform,5
+136,General feedback,I have some general feedback and suggestions for improvement.,other,5
+137,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,2
+138,Incorrect delivery address,The delivery was made to the wrong address.,delivery,1
+139,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,5
+140,Lack of follow-up,There was no follow-up from customer service after my initial complaint.,customer_service,5
+141,Website design issues,There are design issues and inconsistencies across different pages of the website.,website_issues,5
+142,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,4
+143,User interface feedback,I have feedback on the user interface and navigation of the platform.,ecommerce_platform,4
+144,Unspecified issue,I encountered an issue that I cannot specify in detail.,other,3
+145,Payment not processed,My payment for an order was not processed successfully.,billing,2
+146,Incorrect delivery address,The delivery was made to the wrong address.,delivery,5
+147,Expired products,I received products that are past their expiration date.,product_quality,4
+148,Escalation of complaint,I had to escalate my complaint multiple times to get a response.,customer_service,1
+149,Incorrect pricing on the website,The prices displayed on the website do not match the actual checkout prices.,website_issues,5
+150,Ad performance tracking,I would like better tracking and analysis of ad performance metrics.,advertising,4
+151,Missing product information,There is missing or incomplete information about products on the platform.,ecommerce_platform,5
+152,Unspecified issue,I encountered an issue that I cannot specify in detail.,other,3
+153,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,5
+154,Damaged products received,I received damaged products in my delivery.,delivery,1
+155,Expired products,I received products that are past their expiration date.,product_quality,1
+156,Lack of follow-up,There was no follow-up from customer service after my initial complaint.,customer_service,3
+157,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,1
+158,Inconsistent branding in ads,There are inconsistencies in branding across different advertising materials.,advertising,3
+159,Technical issues on the ecommerce platform,I encountered technical issues while using the ecommerce platform.,ecommerce_platform,1
+160,Suggestion for improvement,I have a suggestion for improving a specific aspect of the company.,other,4
+161,Incorrect tax calculation,The tax amount on my bill seems to be calculated incorrectly.,billing,5
+162,Late delivery of products,My order was delivered much later than the estimated delivery date.,delivery,2
+163,Defective items,Some of the items I received are defective and unusable.,product_quality,2
+164,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,3
+165,Slow website performance,The website is very slow and unresponsive during peak hours.,website_issues,4
+166,Ineffective advertising campaigns,I found the advertising campaigns to be ineffective in reaching the target audience.,advertising,2
+167,Slow checkout process,The checkout process on the platform is slow and cumbersome.,ecommerce_platform,4
+168,Complaint not listed,My complaint does not fit into any of the listed categories.,other,2
+169,Payment not processed,My payment for an order was not processed successfully.,billing,2
+170,Missing items in delivery,Some items are missing from the delivery package.,delivery,1
+171,Product packaging damaged,The packaging of the products was damaged upon delivery.,product_quality,4
+172,Difficulties in reaching support,I faced difficulties in reaching customer support through the provided channels.,customer_service,5
+173,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,3
+174,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,4
+175,Payment gateway problems,I experienced issues with completing payments through the platform.,ecommerce_platform,1
+176,General feedback,I have some general feedback and suggestions for improvement.,other,3
+177,Double charged for a service,I noticed that I have been double charged for the same service.,billing,5
+178,Incorrect delivery address,The delivery was made to the wrong address.,delivery,1
+179,Inconsistent product quality,The quality of products varies significantly across different orders.,product_quality,2
+180,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,3
+181,Login issues,I am unable to log in to my account on the website.,website_issues,1
+182,Ineffective advertising campaigns,I found the advertising campaigns to be ineffective in reaching the target audience.,advertising,1
+183,Payment gateway problems,I experienced issues with completing payments through the platform.,ecommerce_platform,4
+184,Unspecified issue,I encountered an issue that I cannot specify in detail.,other,3
+185,Refund not received,I have not received my refund for a canceled service.,billing,1
+186,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,5
+187,Product missing components,The product is missing some essential components.,product_quality,5
+188,Lack of follow-up,There was no follow-up from customer service after my initial complaint.,customer_service,5
+189,Website not mobile-friendly,The website is not optimized for mobile devices and is difficult to navigate.,website_issues,4
+190,Advertising ROI concerns,I have concerns about the return on investment from advertising efforts.,advertising,3
+191,Technical issues on the ecommerce platform,I encountered technical issues while using the ecommerce platform.,ecommerce_platform,1
+192,Technical support needed,I require technical support for a problem I am facing.,other,1
+193,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,5
+194,Incomplete delivery,I received only part of my order in the delivery.,delivery,2
+195,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,3
+196,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,5
+197,Website design issues,There are design issues and inconsistencies across different pages of the website.,website_issues,1
+198,Ad performance tracking,I would like better tracking and analysis of ad performance metrics.,advertising,2
+199,User interface feedback,I have feedback on the user interface and navigation of the platform.,ecommerce_platform,4
+200,Technical support needed,I require technical support for a problem I am facing.,other,3
+201,Payment not processed,My payment for an order was not processed successfully.,billing,2
+202,Delayed shipping notification,I did not receive a notification about the delay in shipping.,delivery,1
+203,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,1
+204,Lack of follow-up,There was no follow-up from customer service after my initial complaint.,customer_service,2
+205,Slow website performance,The website is very slow and unresponsive during peak hours.,website_issues,3
+206,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,2
+207,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,3
+208,General feedback,I have some general feedback and suggestions for improvement.,other,2
+209,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,1
+210,Delayed shipping notification,I did not receive a notification about the delay in shipping.,delivery,1
+211,Expired products,I received products that are past their expiration date.,product_quality,1
+212,Rude customer service representative,I had a negative experience with a rude customer service representative.,customer_service,3
+213,Slow website performance,The website is very slow and unresponsive during peak hours.,website_issues,4
+214,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,2
+215,User interface feedback,I have feedback on the user interface and navigation of the platform.,ecommerce_platform,2
+216,Unspecified issue,I encountered an issue that I cannot specify in detail.,other,2
+217,Incorrect tax calculation,The tax amount on my bill seems to be calculated incorrectly.,billing,5
+218,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,3
+219,Product packaging damaged,The packaging of the products was damaged upon delivery.,product_quality,2
+220,Incorrect information provided,I received incorrect information from customer service representatives.,customer_service,4
+221,Payment gateway errors,I encountered errors when trying to complete a payment on the website.,website_issues,1
+222,Ad performance tracking,I would like better tracking and analysis of ad performance metrics.,advertising,5
+223,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,1
+224,Query about services,I have a query about the services provided by the company.,other,1
+225,Payment not processed,My payment for an order was not processed successfully.,billing,1
+226,Delivery not attempted,No attempt was made to deliver the package to my address.,delivery,2
+227,Product missing components,The product is missing some essential components.,product_quality,2
+228,Rude customer service representative,I had a negative experience with a rude customer service representative.,customer_service,3
+229,Incorrect pricing on the website,The prices displayed on the website do not match the actual checkout prices.,website_issues,3
+230,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,3
+231,Slow checkout process,The checkout process on the platform is slow and cumbersome.,ecommerce_platform,2
+232,Feedback on products,I have feedback and suggestions regarding the products offered.,other,1
+233,Incorrect tax calculation,The tax amount on my bill seems to be calculated incorrectly.,billing,4
+234,Wrong item delivered,I received a different item than what I ordered.,delivery,3
+235,Expired products,I received products that are past their expiration date.,product_quality,4
+236,Ineffective communication,There was a lack of communication regarding the status of my complaint.,customer_service,5
+237,Website design issues,There are design issues and inconsistencies across different pages of the website.,website_issues,2
+238,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,2
+239,Missing product information,There is missing or incomplete information about products on the platform.,ecommerce_platform,5
+240,Request for assistance,I need assistance with a problem but am not sure how to categorize it.,other,1
+241,Billing for a canceled service,I am still being billed for a service that I have canceled.,billing,3
+242,Wrong item delivered,I received a different item than what I ordered.,delivery,2
+243,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,5
+244,Lack of follow-up,There was no follow-up from customer service after my initial complaint.,customer_service,3
+245,Broken links on the website,There are broken links and errors on various pages of the website.,website_issues,2
+246,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,3
+247,Slow checkout process,The checkout process on the platform is slow and cumbersome.,ecommerce_platform,4
+248,Query about services,I have a query about the services provided by the company.,other,4
+249,Payment not processed,My payment for an order was not processed successfully.,billing,3
+250,Delayed shipping notification,I did not receive a notification about the delay in shipping.,delivery,1
+251,Wrong product specifications,The specifications mentioned for the product do not match what I received.,product_quality,1
+252,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,3
+253,Website crashes frequently,The website crashes frequently when I try to access certain pages.,website_issues,5
+254,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,5
+255,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,3
+256,Request for assistance,I need assistance with a problem but am not sure how to categorize it.,other,4
+257,Subscription renewal issue,My subscription was renewed without my authorization.,billing,4
+258,Delivery not attempted,No attempt was made to deliver the package to my address.,delivery,4
+259,Inconsistent product quality,The quality of products varies significantly across different orders.,product_quality,2
+260,Lack of follow-up,There was no follow-up from customer service after my initial complaint.,customer_service,2
+261,Login issues,I am unable to log in to my account on the website.,website_issues,5
+262,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,4
+263,Missing product information,There is missing or incomplete information about products on the platform.,ecommerce_platform,3
+264,General feedback,I have some general feedback and suggestions for improvement.,other,1
+265,Incorrect billing amount,I was charged incorrectly for a service that I did not use.,billing,1
+266,Damaged products received,I received damaged products in my delivery.,delivery,2
+267,Inconsistent product quality,The quality of products varies significantly across different orders.,product_quality,3
+268,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,1
+269,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,4
+270,Low click-through rates,The ads had low click-through rates and did not generate much traffic.,advertising,4
+271,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,2
+272,Suggestion for improvement,I have a suggestion for improving a specific aspect of the company.,other,2
+273,Subscription renewal issue,My subscription was renewed without my authorization.,billing,5
+274,Damaged products received,I received damaged products in my delivery.,delivery,1
+275,Expired products,I received products that are past their expiration date.,product_quality,1
+276,Escalation of complaint,I had to escalate my complaint multiple times to get a response.,customer_service,5
+277,Broken links on the website,There are broken links and errors on various pages of the website.,website_issues,2
+278,Low click-through rates,The ads had low click-through rates and did not generate much traffic.,advertising,2
+279,Product listing errors,There are errors and inconsistencies in the product listings on the platform.,ecommerce_platform,3
+280,Request for assistance,I need assistance with a problem but am not sure how to categorize it.,other,5
+281,Incorrect billing amount,I was charged incorrectly for a service that I did not use.,billing,4
+282,Damaged products received,I received damaged products in my delivery.,delivery,4
+283,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,3
+284,Ineffective communication,There was a lack of communication regarding the status of my complaint.,customer_service,4
+285,Login issues,I am unable to log in to my account on the website.,website_issues,1
+286,Ad performance tracking,I would like better tracking and analysis of ad performance metrics.,advertising,4
+287,Order tracking difficulties,I faced difficulties in tracking my orders through the platform.,ecommerce_platform,2
+288,Unspecified issue,I encountered an issue that I cannot specify in detail.,other,1
+289,Payment not processed,My payment for an order was not processed successfully.,billing,2
+290,Wrong item delivered,I received a different item than what I ordered.,delivery,1
+291,Inconsistent product quality,The quality of products varies significantly across different orders.,product_quality,3
+292,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,5
+293,Website design issues,There are design issues and inconsistencies across different pages of the website.,website_issues,1
+294,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,3
+295,Technical issues on the ecommerce platform,I encountered technical issues while using the ecommerce platform.,ecommerce_platform,3
+296,Suggestion for improvement,I have a suggestion for improving a specific aspect of the company.,other,4
+297,Refund not received,I have not received my refund for a canceled service.,billing,4
+298,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,3
+299,Product not as advertised,The product received does not match the description and photos online.,product_quality,2
+300,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,5
+301,Website not mobile-friendly,The website is not optimized for mobile devices and is difficult to navigate.,website_issues,3
+302,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,1
+303,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,4
+304,Complaint not listed,My complaint does not fit into any of the listed categories.,other,1
+305,Billing for a canceled service,I am still being billed for a service that I have canceled.,billing,2
+306,Wrong item delivered,I received a different item than what I ordered.,delivery,3
+307,Wrong product specifications,The specifications mentioned for the product do not match what I received.,product_quality,2
+308,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,3
+309,Website crashes frequently,The website crashes frequently when I try to access certain pages.,website_issues,3
+310,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,3
+311,Difficulty in product search,It is difficult to find specific products using the search function on the platform.,ecommerce_platform,2
+312,Query about services,I have a query about the services provided by the company.,other,1
+313,Late billing statement,"I received my billing statement late, causing confusion.",billing,4
+314,Late delivery of products,My order was delivered much later than the estimated delivery date.,delivery,5
+315,Product packaging damaged,The packaging of the products was damaged upon delivery.,product_quality,5
+316,Unhelpful responses,The responses from customer service were unhelpful and generic.,customer_service,3
+317,Website not mobile-friendly,The website is not optimized for mobile devices and is difficult to navigate.,website_issues,5
+318,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,2
+319,Payment gateway problems,I experienced issues with completing payments through the platform.,ecommerce_platform,5
+320,Suggestion for improvement,I have a suggestion for improving a specific aspect of the company.,other,4
+321,Refund not received,I have not received my refund for a canceled service.,billing,1
+322,Missing items in delivery,Some items are missing from the delivery package.,delivery,3
+323,Inconsistent product quality,The quality of products varies significantly across different orders.,product_quality,2
+324,Escalation of complaint,I had to escalate my complaint multiple times to get a response.,customer_service,1
+325,Payment gateway errors,I encountered errors when trying to complete a payment on the website.,website_issues,4
+326,Low click-through rates,The ads had low click-through rates and did not generate much traffic.,advertising,1
+327,Product listing errors,There are errors and inconsistencies in the product listings on the platform.,ecommerce_platform,1
+328,Query about services,I have a query about the services provided by the company.,other,1
+329,Billing for a canceled service,I am still being billed for a service that I have canceled.,billing,5
+330,Missing items in delivery,Some items are missing from the delivery package.,delivery,4
+331,Expired products,I received products that are past their expiration date.,product_quality,2
+332,Difficulties in reaching support,I faced difficulties in reaching customer support through the provided channels.,customer_service,1
+333,Login issues,I am unable to log in to my account on the website.,website_issues,3
+334,Ad performance tracking,I would like better tracking and analysis of ad performance metrics.,advertising,3
+335,Product listing errors,There are errors and inconsistencies in the product listings on the platform.,ecommerce_platform,5
+336,General feedback,I have some general feedback and suggestions for improvement.,other,2
+337,Payment not processed,My payment for an order was not processed successfully.,billing,3
+338,Wrong item delivered,I received a different item than what I ordered.,delivery,4
+339,Expired products,I received products that are past their expiration date.,product_quality,2
+340,Incorrect information provided,I received incorrect information from customer service representatives.,customer_service,1
+341,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,4
+342,Misleading advertisements,The advertisements were misleading and did not accurately represent the products.,advertising,2
+343,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,3
+344,General feedback,I have some general feedback and suggestions for improvement.,other,1
+345,Late billing statement,"I received my billing statement late, causing confusion.",billing,2
+346,Incorrect delivery address,The delivery was made to the wrong address.,delivery,5
+347,Product not as advertised,The product received does not match the description and photos online.,product_quality,3
+348,Escalation of complaint,I had to escalate my complaint multiple times to get a response.,customer_service,2
+349,Login issues,I am unable to log in to my account on the website.,website_issues,3
+350,Incorrect ad placements,The ads were placed on irrelevant platforms with low engagement.,advertising,3
+351,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,1
+352,General feedback,I have some general feedback and suggestions for improvement.,other,1
+353,Late billing statement,"I received my billing statement late, causing confusion.",billing,5
+354,Incomplete delivery,I received only part of my order in the delivery.,delivery,1
+355,Inconsistent product quality,The quality of products varies significantly across different orders.,product_quality,2
+356,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,4
+357,Broken links on the website,There are broken links and errors on various pages of the website.,website_issues,5
+358,Advertising strategy feedback,I have feedback and suggestions for improving the advertising strategy.,advertising,4
+359,Payment gateway problems,I experienced issues with completing payments through the platform.,ecommerce_platform,1
+360,Feedback on products,I have feedback and suggestions regarding the products offered.,other,4
+361,Incorrect tax calculation,The tax amount on my bill seems to be calculated incorrectly.,billing,5
+362,Late delivery of products,My order was delivered much later than the estimated delivery date.,delivery,3
+363,Product missing components,The product is missing some essential components.,product_quality,1
+364,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,2
+365,Slow website performance,The website is very slow and unresponsive during peak hours.,website_issues,2
+366,Advertising ROI concerns,I have concerns about the return on investment from advertising efforts.,advertising,5
+367,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,2
+368,General feedback,I have some general feedback and suggestions for improvement.,other,4
+369,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,3
+370,Delivery not attempted,No attempt was made to deliver the package to my address.,delivery,1
+371,Product missing components,The product is missing some essential components.,product_quality,3
+372,Lack of follow-up,There was no follow-up from customer service after my initial complaint.,customer_service,3
+373,Website design issues,There are design issues and inconsistencies across different pages of the website.,website_issues,2
+374,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,1
+375,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,4
+376,Complaint not listed,My complaint does not fit into any of the listed categories.,other,1
+377,Refund not received,I have not received my refund for a canceled service.,billing,2
+378,Missing items in delivery,Some items are missing from the delivery package.,delivery,3
+379,Product not as advertised,The product received does not match the description and photos online.,product_quality,2
+380,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,3
+381,Broken links on the website,There are broken links and errors on various pages of the website.,website_issues,3
+382,Advertising strategy feedback,I have feedback and suggestions for improving the advertising strategy.,advertising,3
+383,Missing product information,There is missing or incomplete information about products on the platform.,ecommerce_platform,3
+384,Unspecified issue,I encountered an issue that I cannot specify in detail.,other,1
+385,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,4
+386,Damaged products received,I received damaged products in my delivery.,delivery,4
+387,Defective items,Some of the items I received are defective and unusable.,product_quality,5
+388,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,3
+389,Website design issues,There are design issues and inconsistencies across different pages of the website.,website_issues,3
+390,Ineffective advertising campaigns,I found the advertising campaigns to be ineffective in reaching the target audience.,advertising,5
+391,Slow checkout process,The checkout process on the platform is slow and cumbersome.,ecommerce_platform,5
+392,Account-related issue,I have an issue related to my account or user profile.,other,1
+393,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,1
+394,Incorrect delivery address,The delivery was made to the wrong address.,delivery,4
+395,Inconsistent product quality,The quality of products varies significantly across different orders.,product_quality,2
+396,Incorrect information provided,I received incorrect information from customer service representatives.,customer_service,4
+397,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,5
+398,Ineffective advertising campaigns,I found the advertising campaigns to be ineffective in reaching the target audience.,advertising,5
+399,Slow checkout process,The checkout process on the platform is slow and cumbersome.,ecommerce_platform,3
+400,Suggestion for improvement,I have a suggestion for improving a specific aspect of the company.,other,3
+401,Refund not received,I have not received my refund for a canceled service.,billing,3
+402,Delivery not attempted,No attempt was made to deliver the package to my address.,delivery,4
+403,Expired products,I received products that are past their expiration date.,product_quality,1
+404,Unhelpful responses,The responses from customer service were unhelpful and generic.,customer_service,3
+405,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,4
+406,Low click-through rates,The ads had low click-through rates and did not generate much traffic.,advertising,3
+407,Order tracking difficulties,I faced difficulties in tracking my orders through the platform.,ecommerce_platform,3
+408,Query about services,I have a query about the services provided by the company.,other,3
+409,Refund not received,I have not received my refund for a canceled service.,billing,3
+410,Late delivery of products,My order was delivered much later than the estimated delivery date.,delivery,5
+411,Defective items,Some of the items I received are defective and unusable.,product_quality,3
+412,Rude customer service representative,I had a negative experience with a rude customer service representative.,customer_service,5
+413,Login issues,I am unable to log in to my account on the website.,website_issues,4
+414,Advertising strategy feedback,I have feedback and suggestions for improving the advertising strategy.,advertising,1
+415,Order tracking difficulties,I faced difficulties in tracking my orders through the platform.,ecommerce_platform,1
+416,General feedback,I have some general feedback and suggestions for improvement.,other,2
+417,Late billing statement,"I received my billing statement late, causing confusion.",billing,2
+418,Wrong item delivered,I received a different item than what I ordered.,delivery,3
+419,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,2
+420,Unhelpful responses,The responses from customer service were unhelpful and generic.,customer_service,1
+421,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,5
+422,Inconsistent branding in ads,There are inconsistencies in branding across different advertising materials.,advertising,1
+423,Payment gateway problems,I experienced issues with completing payments through the platform.,ecommerce_platform,3
+424,Request for assistance,I need assistance with a problem but am not sure how to categorize it.,other,5
+425,Payment not processed,My payment for an order was not processed successfully.,billing,4
+426,Incorrect delivery address,The delivery was made to the wrong address.,delivery,3
+427,Product not as advertised,The product received does not match the description and photos online.,product_quality,2
+428,Difficulties in reaching support,I faced difficulties in reaching customer support through the provided channels.,customer_service,4
+429,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,5
+430,Advertising ROI concerns,I have concerns about the return on investment from advertising efforts.,advertising,3
+431,Product listing errors,There are errors and inconsistencies in the product listings on the platform.,ecommerce_platform,1
+432,Account-related issue,I have an issue related to my account or user profile.,other,4
+433,Payment not processed,My payment for an order was not processed successfully.,billing,1
+434,Delivery not attempted,No attempt was made to deliver the package to my address.,delivery,5
+435,Product not as advertised,The product received does not match the description and photos online.,product_quality,1
+436,Unhelpful responses,The responses from customer service were unhelpful and generic.,customer_service,1
+437,Website not mobile-friendly,The website is not optimized for mobile devices and is difficult to navigate.,website_issues,1
+438,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,2
+439,Order tracking difficulties,I faced difficulties in tracking my orders through the platform.,ecommerce_platform,2
+440,Account-related issue,I have an issue related to my account or user profile.,other,5
+441,Incorrect tax calculation,The tax amount on my bill seems to be calculated incorrectly.,billing,1
+442,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,1
+443,Poor quality of products received,The products I received are of poor quality and not as described.,product_quality,5
+444,Incorrect information provided,I received incorrect information from customer service representatives.,customer_service,5
+445,Slow website performance,The website is very slow and unresponsive during peak hours.,website_issues,4
+446,Advertising ROI concerns,I have concerns about the return on investment from advertising efforts.,advertising,1
+447,User interface feedback,I have feedback on the user interface and navigation of the platform.,ecommerce_platform,1
+448,Technical support needed,I require technical support for a problem I am facing.,other,3
+449,Billing discrepancy,There is a discrepancy in the billing amount on my invoice.,billing,1
+450,Late delivery of products,My order was delivered much later than the estimated delivery date.,delivery,5
+451,Product packaging damaged,The packaging of the products was damaged upon delivery.,product_quality,5
+452,Unhelpful responses,The responses from customer service were unhelpful and generic.,customer_service,3
+453,Payment gateway errors,I encountered errors when trying to complete a payment on the website.,website_issues,2
+454,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,3
+455,Technical issues on the ecommerce platform,I encountered technical issues while using the ecommerce platform.,ecommerce_platform,5
+456,Technical support needed,I require technical support for a problem I am facing.,other,1
+457,Refund not received,I have not received my refund for a canceled service.,billing,1
+458,Damaged products received,I received damaged products in my delivery.,delivery,1
+459,Product packaging damaged,The packaging of the products was damaged upon delivery.,product_quality,4
+460,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,1
+461,Website not mobile-friendly,The website is not optimized for mobile devices and is difficult to navigate.,website_issues,4
+462,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,5
+463,Slow checkout process,The checkout process on the platform is slow and cumbersome.,ecommerce_platform,3
+464,Account-related issue,I have an issue related to my account or user profile.,other,3
+465,Late billing statement,"I received my billing statement late, causing confusion.",billing,2
+466,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,5
+467,Poor quality of products received,The products I received are of poor quality and not as described.,product_quality,3
+468,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,5
+469,Unable to place orders,I am unable to place orders on the website due to technical issues.,website_issues,3
+470,Ad performance tracking,I would like better tracking and analysis of ad performance metrics.,advertising,1
+471,Difficulty in product search,It is difficult to find specific products using the search function on the platform.,ecommerce_platform,4
+472,Query about services,I have a query about the services provided by the company.,other,1
+473,Subscription renewal issue,My subscription was renewed without my authorization.,billing,2
+474,Missing items in delivery,Some items are missing from the delivery package.,delivery,1
+475,Defective items,Some of the items I received are defective and unusable.,product_quality,3
+476,Ineffective communication,There was a lack of communication regarding the status of my complaint.,customer_service,2
+477,Incorrect pricing on the website,The prices displayed on the website do not match the actual checkout prices.,website_issues,2
+478,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,1
+479,Payment gateway problems,I experienced issues with completing payments through the platform.,ecommerce_platform,5
+480,Complaint not listed,My complaint does not fit into any of the listed categories.,other,3
+481,Incorrect billing amount,I was charged incorrectly for a service that I did not use.,billing,1
+482,Delivery package tampered,The delivery package seemed to be tampered with upon receipt.,delivery,4
+483,Product not as advertised,The product received does not match the description and photos online.,product_quality,1
+484,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,2
+485,Login issues,I am unable to log in to my account on the website.,website_issues,2
+486,Advertising budget allocation,There were issues with how the advertising budget was allocated and managed.,advertising,1
+487,Difficulty in product search,It is difficult to find specific products using the search function on the platform.,ecommerce_platform,2
+488,Technical support needed,I require technical support for a problem I am facing.,other,3
+489,Double charged for a service,I noticed that I have been double charged for the same service.,billing,4
+490,Incorrect delivery address,The delivery was made to the wrong address.,delivery,3
+491,Product damaged in transit,The products were damaged during shipping and handling.,product_quality,2
+492,Long wait times on customer support,I had to wait for a long time on hold to reach customer support.,customer_service,1
+493,Broken links on the website,There are broken links and errors on various pages of the website.,website_issues,5
+494,Advertising ROI concerns,I have concerns about the return on investment from advertising efforts.,advertising,4
+495,Ecommerce platform downtime,The platform experiences frequent downtime and maintenance issues.,ecommerce_platform,5
+496,Query about services,I have a query about the services provided by the company.,other,5
+497,Late billing statement,"I received my billing statement late, causing confusion.",billing,3
+498,Incomplete delivery,I received only part of my order in the delivery.,delivery,5
+499,Defective items,Some of the items I received are defective and unusable.,product_quality,5
+500,Unresolved issues,My issues were not resolved despite multiple attempts to contact customer service.,customer_service,2
