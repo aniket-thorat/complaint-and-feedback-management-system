@@ -21,7 +21,7 @@ export const usersPagesGrid = [
     label: "Created At",
     value: "created_at",
     isDate: true,
-  },
+  }
 ];
 
 export const categoriesPageGrid = [

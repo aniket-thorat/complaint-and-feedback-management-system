@@ -18,6 +18,7 @@ const TableHeading = ({ table, sortHandler, sortBy }) => {
             {heading.value === sortBy && <SortIcon />}
           </th>
         ))}
+        <th scope="col" className="px-6 py-3 text-base cursor-pointer transition duration-500 hover:text-gray-700">Modify</th>
       </tr>
     </thead>
   );

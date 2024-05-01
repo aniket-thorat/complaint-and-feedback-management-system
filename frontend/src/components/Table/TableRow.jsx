@@ -1,6 +1,8 @@
 import DateFormatter from "../../UI/DateFormatter";
 import StatusFormatter from "../../UI/StatusFormatter";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 const TableRow = ({ element, linkTo, table }) => {
   const navigate = useNavigate();
@@ -37,6 +39,13 @@ const TableRow = ({ element, linkTo, table }) => {
           )}
         </td>
       ))}
+      <td className="px-6 py-4">
+          <FontAwesomeIcon
+            icon={faEdit}
+            className="text-blue-500 cursor-pointer"
+            onClick={() => navigate(`/users/${element.id}`)}
+          />
+      </td>
     </tr>
   );
 };
