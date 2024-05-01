@@ -26,6 +26,7 @@ import Categories from "./pages/admin/Categories";
 import AdminComplaint from "./pages/admin/Complaint";
 import ChatbotComponent from "./components/ChatBot/ChatbotComponent";
 import UpdateUser from "./pages/admin/UpdateUser";
+import UpdateCategory from "./pages/admin/UpdateCategory";
 
 const App = () => {
 	const [isLoading, setIsLoading] = useState(true);
@@ -105,6 +106,7 @@ const App = () => {
 				</Route>
 			</Route>
 			<Route path="/users/:id" element={<UpdateUser />} />
+			<Route path="/categories/:categoryId" element={<UpdateCategory />} />
 			<Route path="/admin">
 				<Route
 					index={true}

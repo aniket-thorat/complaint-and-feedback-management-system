@@ -43,7 +43,7 @@ const TableRow = ({ element, linkTo, table }) => {
           <FontAwesomeIcon
             icon={faEdit}
             className="text-blue-500 cursor-pointer"
-            onClick={() => navigate(`/users/${element.id}`)}
+            onClick={ element.number !== undefined ? () => navigate(`/categories/${element.id}`) : () => navigate(`/users/${element.id}`) }
           />
       </td>
     </tr>
