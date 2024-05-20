@@ -14,8 +14,8 @@ export const guestNavLinks = [
 
 export const userNavLinks = [
   // { path: "/faq", text: "FAQ" },
-  { path: "/my-complaints", text: "My Complaints" },
-  { path: "/create-complaint", text: "Create Complaint" },
+  { path: "/my-complaints", text: "Complaints" },
+  // { path: "/create-complaint", text: "Create Complaint" },
 ];
 
 export const adminMenu = [
