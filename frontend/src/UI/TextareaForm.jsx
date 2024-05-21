@@ -54,10 +54,10 @@ const TextareaForm = ({
   };
 
   return (
-    <form className="w-full">
+    <form className="w-full mt-4">
       <div className="relative w-full">
         <textarea
-          className="w-full min-h-[2.5rem] h-fit max-h-[8rem] resize-y pl-4 pr-7 py-1.5 border rounded-xl outline-none text-sm sm:text-base dark:bg-primarylessDarker dark:text-textLighter dark:border-none"
+          className="w-full min-h-[3rem] h-auto max-h-[10rem] resize-y pl-4 pr-12 py-2 border rounded-xl shadow-md outline-none text-sm sm:text-base bg-white text-gray-500 border-gray-300 focus:ring-2 focus:ring-blue-400 transition duration-300 ease-in-out dark:bg-gray-600 dark:text-gray-200 dark:border-gray-600"
           placeholder={placeholder}
           value={text}
           onChange={changeHandler}
@@ -65,7 +65,7 @@ const TextareaForm = ({
           onKeyDown={keyDownHandler}
         />
         <PiNavigationArrowFill
-          className={showSendIcon ? iconClasses + " !opacity-100" : iconClasses}
+          className={`${iconClasses} absolute right-4 top-1/2 transform -translate-y-1/2 text-2xl text-blue-500 cursor-pointer transition duration-300 ease-in-out ${showSendIcon ? 'opacity-100' : 'opacity-50'}`}
           onClick={submitHandler}
         />
       </div>
