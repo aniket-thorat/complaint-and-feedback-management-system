@@ -4,7 +4,7 @@ const { checkPermissions } = require("../utils");
 
 const createCategory = async (req, res) => {
 	try {
-		checkPermissions(req.user, req.user._id);
+		//checkPermissions(req.user, req.user._id);
 		const { name } = req.body;
 
 		const category = new Category({
