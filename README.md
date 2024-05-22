@@ -4,6 +4,7 @@
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Team](#team)
 
 ## Installation
 
@@ -43,3 +44,11 @@ To start the project in development mode, use the following command:
         ```bash
         npm run dev
         ```
+
+## Team
+- Aniket Thorat - 434036
+- Artish Kumar - 434008
+- Fariya Osmani - 434028
+- Tejas Warake - 434038
+
+**Faculty Mentor** **:** Dr. G. T. Chavan 
