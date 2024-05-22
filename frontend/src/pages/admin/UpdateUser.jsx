@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
-
 const UpdateUser = () => {
     const navigate = useNavigate();
     const { id } = useParams();
@@ -11,24 +10,29 @@ const UpdateUser = () => {
         email: '',
         firstName: '',
         lastName: '',
-        phone: ''
+        phone: '',
+        role: '',
     });
-
-    console.log("The user id is: ", id);
+    const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
         axios.get(`http://127.0.0.1:5000/api/v1/users/${id}`)
           .then(res => {
-            const { email, firstName, lastName, phone } = res.data;
-            setFormData({ email, firstName, lastName, phone });
+            const { email, firstName, lastName, phone, role } = res.data;
+            setFormData({ email, firstName, lastName, phone, role });
+            setIsAdmin(role === 'admin');
           })
           .catch(err => console.error(err));
-      }, [id]);
-
-    const { email, firstName, lastName, phone } = formData;
+    }, [id]);
 
     const handleChange = e => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleRoleChange = e => {
+        const newRole = e.target.checked ? 'admin' : 'user';
+        setFormData({ ...formData, role: newRole });
+        setIsAdmin(e.target.checked);
     };
 
     const handleSubmit = async e => {
@@ -38,7 +42,7 @@ const UpdateUser = () => {
             // Send PUT request to update user details
             await axios.put(`http://127.0.0.1:5000/api/v1/users/${id}`, formData);
             alert('User details updated successfully');
-            navigate(`/admin/users/1`)
+            navigate(`/admin/users/1`);
         } catch (err) {
             console.error(err);
             alert('Error updating user details');
@@ -57,7 +61,7 @@ const UpdateUser = () => {
                         id="email"
                         name="email"
                         type="email"
-                        value={email}
+                        value={formData.email}
                         onChange={handleChange}
                         placeholder="Email"
                     />
@@ -71,7 +75,7 @@ const UpdateUser = () => {
                         id="firstName"
                         name="firstName"
                         type="text"
-                        value={firstName}
+                        value={formData.firstName}
                         onChange={handleChange}
                         placeholder="First Name"
                     />
@@ -85,7 +89,7 @@ const UpdateUser = () => {
                         id="lastName"
                         name="lastName"
                         type="text"
-                        value={lastName}
+                        value={formData.lastName}
                         onChange={handleChange}
                         placeholder="Last Name"
                     />
@@ -99,10 +103,23 @@ const UpdateUser = () => {
                         id="phone"
                         name="phone"
                         type="text"
-                        value={phone}
+                        value={formData.phone}
                         onChange={handleChange}
                         placeholder="Phone"
                     />
+                </div>
+                <div className="mb-4">
+                    <label className="flex items-center text-gray-700 text-sm font-bold mb-2">
+                        <input
+                            className="mr-2"
+                            type="checkbox"
+                            id="role"
+                            name="role"
+                            checked={isAdmin}
+                            onChange={handleRoleChange}
+                        />
+                        Make admin user
+                    </label>
                 </div>
                 <div className="flex items-center justify-between">
                     <button

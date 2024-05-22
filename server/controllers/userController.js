@@ -65,6 +65,7 @@ const getUser = async (req, res) => {
 	console.log("The user id is: ", id);
 	try {
 		const user = await User.findById(id);
+		console.log(user);
 		res.json(user);
 	} catch (err) {
 		console.error(err.message);
@@ -79,11 +80,11 @@ const updateUser = async (req, res) => {
 	}
 
 	const { id } = req.params;
-	const { email, firstName, lastName, phone } = req.body;
+	const { email, firstName, lastName, phone, role } = req.body;
 
 	try {
 		// Find the user by ID and update the details
-		const updatedUser = await User.findByIdAndUpdate(id, { email, firstName, lastName, phone }, { new: true });
+		const updatedUser = await User.findByIdAndUpdate(id, { email, firstName, lastName, phone, role }, { new: true });
 
 		if (!updatedUser) {
 			return res.status(404).json({ msg: 'User not found' });

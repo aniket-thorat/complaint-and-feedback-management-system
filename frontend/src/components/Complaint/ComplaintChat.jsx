@@ -12,32 +12,33 @@ const ComplaintChat = ({ messages }) => {
   };
 
   return (
-    <div className="p-5 pr-0 bg-[#efeff0] rounded-lg">
-      <ScrollableDiv className=" h-[550px] flex items-end">
-        <div className="w-full max-h-full flex flex-col gap-3">
+    <div className="relative p-5 bg-gray-100 rounded-lg shadow-2xl overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-gray-200 opacity-80"></div>
+      <div className="relative z-10 h-[550px] flex items-end overflow-auto p-5">
+        <div className="w-full max-h-full flex flex-col gap-4">
           {messages.map((message) => (
             <div
-              className={
-                isSent(message.from)
-                  ? "w-fit max-w-[60%]"
-                  : "w-fit max-w-[60%] ml-auto"
-              }
+              className={`${
+                isSent(message.from) ? "self-start" : "self-end"
+              } max-w-[70%]`}
               key={message.id}
             >
               <div
-                className={`lex flex-col ${
+                className={`flex flex-col ${
                   isSent(message.from) ? "items-end" : "items-start"
                 }`}
               >
                 <p
-                  className={`p-2 rounded-lg tracking-wide break-all ${
-                    isSent(message.from) ? "bg-sky-200" : "bg-sky-500"
+                  className={`p-3 rounded-lg shadow-md tracking-wide break-words ${
+                    isSent(message.from)
+                      ? "bg-blue-100 text-gray-800"
+                      : "bg-blue-600 text-white"
                   }`}
                 >
                   {message.text}
                 </p>
                 <p
-                  className={`text-sm text-gray-500 font-semibold ${
+                  className={`text-xs text-gray-400 mt-1 ${
                     isSent(message.from) ? "text-left" : "text-right"
                   }`}
                 >
@@ -47,7 +48,7 @@ const ComplaintChat = ({ messages }) => {
             </div>
           ))}
         </div>
-      </ScrollableDiv>
+      </div>
     </div>
   );
 };
